@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './shared/menu/menu.component';
 
+import {APP_BASE_HREF} from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,7 @@ import { MenuComponent } from './shared/menu/menu.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: '/mapas-app-angular/app'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
